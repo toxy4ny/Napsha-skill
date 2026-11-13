@@ -1,0 +1,60 @@
+{
+  "id": "05-short-name",
+  "status": "run",
+  "record_completeness": "complete",
+  "executed_at": "YYYY-MM-DDTHH:MM:SS+HH:MM",
+  "inputs": [
+    {
+      "condition": "A",
+      "turn": 1,
+      "path": "experiments/records/05-short-name/input-A-turn1.txt",
+      "sha256": "<sha256 of the exact archived prompt>"
+    },
+    {
+      "condition": "B",
+      "turn": 1,
+      "path": "experiments/records/05-short-name/input-B-turn1.txt",
+      "sha256": "<sha256 of the exact archived prompt>"
+    }
+  ],
+  "settings": {
+    "model_label": "<model label exactly as displayed>",
+    "model_snapshot_verified": false,
+    "fresh_chat": true,
+    "exposed_settings": "<reasoning level, thinking mode, plan, or equivalent>",
+    "other_skills": "<disabled in both conditions, or list what stayed enabled>",
+    "tools": "<enabled tools, or none>",
+    "memory_or_project_context": "<disabled, or record what could not be disabled>"
+  },
+  "loading_evidence": {
+    "status": "confirmed",
+    "note": "<what was observed, by whom, and how it was captured>",
+    "artifacts": [
+      {
+        "path": "experiments/records/05-short-name/loading.txt",
+        "sha256": "<sha256 of the archived loading evidence>"
+      }
+    ]
+  },
+  "reviewer": {
+    "name_or_role": "<reviewer name or durable role label>",
+    "relationship_to_skill": "<no role in creating the skill, or disclose involvement>",
+    "independent": true,
+    "blinded_to_condition": true,
+    "reviewed_at": "YYYY-MM-DD"
+  },
+  "deviations": [],
+  "redactions": [],
+  "responses": [
+    {
+      "condition": "A",
+      "path": "experiments/raw/05-short-name/A.txt",
+      "sha256": "<sha256 of the verbatim baseline response>"
+    },
+    {
+      "condition": "B",
+      "path": "experiments/raw/05-short-name/B.txt",
+      "sha256": "<sha256 of the verbatim skill response>"
+    }
+  ]
+}

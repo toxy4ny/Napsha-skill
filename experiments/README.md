@@ -29,6 +29,36 @@ independently replicated ratings, or a preregistered quantitative benchmark.
   repository.
 - A response's proposed experiment is **not** an experiment we actually conducted.
   We evaluated the quality of the proposed plan, not the hypothetical results it describes.
+- [releases/v0.1.0.json](releases/v0.1.0.json) is an independent baseline for the frozen
+  skill files, the distributable archive, and the evaluation-case inventory. Validation
+  checks the working tree and `manifest.json` against it, so editing the manifest alone
+  cannot silently re-baseline a published skill.
+
+## Recording standard for future rounds
+
+Rounds 01–04 were assembled before a complete recording standard existed. They are
+marked `historical_partial` in the manifest and should not be treated as a model for
+new work. **Every new round must be `complete`.**
+
+A complete round records:
+
+- `executed_at` with an explicit timezone;
+- the **exact submitted input** for each condition and turn, archived under
+  [records/](records/) with a SHA-256 hash — not a later reconstruction;
+- **settings**: displayed model label, whether the backend snapshot was verified,
+  fresh-chat status, exposed reasoning/settings, other skills, tools, and
+  memory/project context;
+- **loading evidence**: `confirmed`, `not_observed`, or `unknown`, with a note and
+  hashed artifacts whenever confirmed (a self-announcement is not confirmation);
+- **reviewer provenance**: durable name or role, relationship to the skill,
+  independence, whether condition labels were blinded, and review date;
+- explicit `deviations` and `redactions` lists, even when empty.
+
+The machine-readable definition and artifact layout are in [SCHEMA.md](SCHEMA.md), with
+a copyable [record template](record-template.json) and the
+[records directory](records/). [`scripts/validate.py`](../scripts/validate.py)
+enforces these fields and rejects new partial rounds, so an incomplete record fails
+CI rather than entering the notebook unnoticed.
 
 ## Round 01 — Recognizing leading questions
 
@@ -156,5 +186,7 @@ leaving a separate stability finding intact. No responses have been collected fo
 this test. Testing paused when the user's Claude allowance was exhausted.
 
 This repository will continue to add new tests, documented outcomes, and versioned
-improvements. Future rounds should record exact inputs and visible loading events,
-use independent review where possible, and preserve failures as carefully as gains.
+improvements. Future rounds must follow the [recording standard](SCHEMA.md): exact
+inputs, environment/settings, visible loading evidence, and reviewer provenance are
+required, independent review is preferred where feasible, and failures are preserved
+as carefully as gains.

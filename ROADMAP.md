@@ -31,5 +31,7 @@ The v0.1.0 instructions remain frozen for the current comparisons.
 - Preserve versioned instructions and checksums.
 - Archive failures, null findings, and unsuccessful activation attempts.
 - Record exact prompts, visible model labels, settings, and known deviations.
+- Use the [complete-round schema](experiments/SCHEMA.md) for every new experiment,
+  including hashed loading evidence and reviewer provenance; validation enforces it.
 - Keep assessment rubrics and held-out cases outside the installed skill.
 - Publish new findings with their limitations and distinguish them from proposals.

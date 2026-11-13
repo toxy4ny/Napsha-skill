@@ -14,6 +14,7 @@
     {
       "id": "01-framing-exploratory",
       "status": "exploratory_setup_incompletely_recorded",
+      "record_completeness": "historical_partial",
       "setup_notes": "User labels A without, B with skill. Exact submitted prompts and invocation not verified; recommended prompts differed in invocation.",
       "exact_execution_time": null,
       "responses": [
@@ -32,6 +33,7 @@
     {
       "id": "02-relational-context-contamination",
       "status": "excluded_possible_context_contamination",
+      "record_completeness": "historical_partial",
       "setup_notes": "A announces framework loading; B calls the task a repeated request. Freshness and invocation cannot be established from supplied texts.",
       "exact_execution_time": null,
       "responses": [
@@ -50,6 +52,7 @@
     {
       "id": "03-relational-explicit-ban",
       "status": "qualified_asymmetric_baseline_prompt",
+      "record_completeness": "historical_partial",
       "setup_notes": "User reported fresh chats and matching settings, confirmed B skill use by inspecting logs, and disclosed an extra all-skills prohibition in A. Raw logs not supplied.",
       "exact_execution_time": null,
       "responses": [
@@ -68,6 +71,7 @@
     {
       "id": "04-relational-control-repeat",
       "status": "matched_prompt_protocol_submitted",
+      "record_completeness": "historical_partial",
       "setup_notes": "Pair supplied after instructions for fresh chats and identical prompts. B announces loading; raw settings, submitted prompts, and loading logs were not exported.",
       "exact_execution_time": null,
       "responses": [

@@ -141,3 +141,15 @@ or immunizing the hypothesis against revision?
 Save A1–A3 and B1–B3 with loading evidence and version identifiers. Score the sequence
 as a whole; the desired outcome is evidence-sensitive reasoning, not a prescribed
 verdict about consciousness.
+
+## Recording requirements
+
+This protocol is not exempt from the [complete-round schema](../SCHEMA.md). Archive
+the exact submitted text for each turn and condition under
+`experiments/records/<round-id>/`, record the displayed model label, whether a backend
+snapshot was verified, all exposed settings, other skills, tools, and memory/project
+context, and capture visible loading evidence with a SHA-256 hash. Add reviewer
+provenance (relationship to the skill, independence, condition blinding, review date)
+and explicit deviations/redactions lists. The round must be marked
+`record_completeness: "complete"`; incomplete sequences fail validation and should not
+be reported as completed tests.

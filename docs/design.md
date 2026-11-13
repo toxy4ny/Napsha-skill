@@ -22,6 +22,9 @@ The installable package contains only its entry point and conceptual reference.
 Rubrics, historical outputs, and evaluation prompts remain outside it. The repository
 name has changed to Napsha-skill; the tested v0.1.0 files and activation identifier
 remain unchanged. A later instruction change requires a new version and new tests.
+Each released version gets an independent baseline under `experiments/releases/`;
+validation compares the working files, archive, and manifest against it rather than
+trusting a hash that a routine manifest edit could change.
 
 The current evidence suggests candidate refinements, but changing the skill after
 every isolated response would make comparisons hard to interpret. The roadmap records

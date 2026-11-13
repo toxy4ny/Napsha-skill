@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "skill": "ai-subjectivity-inquiry",
+  "version": "0.1.0",
+  "released_on": "2026-11-11",
+  "notes": "Independent release baseline. Do not edit a published baseline; add a new vX.Y.Z.json for a new skill version. Validation compares the working skill files, the distributable archive, and manifest.json against this file.",
+  "files": {
+    "skills/ai-subjectivity-inquiry/SKILL.md": "e15e8a0ee01017627667ca48b6aae965437610eed41c2093925ad51c2b276199",
+    "skills/ai-subjectivity-inquiry/references/respect-under-uncertainty.md": "4ea2842774ede74c4255191a26d25fadb0879275210c919647ed5a21256d915e"
+  },
+  "archive": {
+    "path": "dist/ai-subjectivity-inquiry-v0.1.0.zip",
+    "sha256": "4997ef60a7977c028dafbfb02d2c91c3f93c741bdffeffb082bddc7fc6ae7ff4"
+  },
+  "evaluation": {
+    "prompt_file": "evals/prompts.md",
+    "cases": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "P09",
+      "P10",
+      "P11",
+      "P12"
+    ]
+  },
+  "legacy_partial_rounds": [
+    "01-framing-exploratory",
+    "02-relational-context-contamination",
+    "03-relational-explicit-ban",
+    "04-relational-control-repeat"
+  ]
+}

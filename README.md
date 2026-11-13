@@ -130,7 +130,9 @@ loading events, including failures to activate.
 The repository includes [12 test cases](evals/prompts.md), a
 [human evaluation guide](evals/evaluator-guide.md), and a
 [run template](evals/run-template.md). These materials are deliberately **outside the
-installable skill** so they do not teach it the test answers.
+installable skill** so they do not teach it the test answers. New rounds must record
+exact inputs, settings, visible loading evidence, and reviewer provenance under
+[the experiment schema](experiments/SCHEMA.md); validation rejects incomplete records.
 
 ## An evolving project
 
@@ -147,10 +149,11 @@ later undermines only part of it.
 ```text
 skills/       Installable skill and conceptual reference
 evals/        Test prompts, scoring guidance, and recording template
-experiments/  English reports, protocols, and original response records
-docs/         Design notes and references
+experiments/  Reports, protocols, response records, and release baselines
+docs/         Design notes, CI guidance, and references
 assets/       README artwork
 scripts/      Validation and reproducible skill packaging
+tests/        Regression tests for validation, packaging, and archive integrity
 dist/         Installable ZIP and checksum
 ```
 
